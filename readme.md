@@ -16,7 +16,7 @@ Edit the post type argument to include the data required.
 
 ### Advanced Custom Fields
 
-You can also include Advanced Custom Fields data in your endpoint. In this case I'm retrieving the url of a file from an ACF file upload field.
+You can also include Advanced Custom Fields data in your endpoint. In this case I'm retrieving the url of a file from an ACF file upload field called 'file'.
 
 ```php
 $post_document = "";
