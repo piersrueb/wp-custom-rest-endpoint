@@ -30,10 +30,9 @@
             $post_excerpt = get_the_excerpt($id);
             $permalink = get_permalink($id);
             //  get acf field
+            $post_document = "";
             if(get_field( 'file', $id )){
                 $post_document = get_field( 'file', $id )['url'];
-            } else{
-                $post_document = "";
             }
             //  fields
             $posts_data[] = (object) array(
