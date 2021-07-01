@@ -5,7 +5,7 @@ Create custom rest API endpoint for your Wordpress site. Just include this php f
 Endpoint url:
 
 ```
-https://yoursite.com/wp-json/custom/v1/custom
+https://yoursite.com/wp-json/custom/v1/custom-data
 ```
 
 Edit the post type argument to include the data required.

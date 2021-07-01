@@ -1,11 +1,11 @@
 <?php
 
     //  custom rest api endpoint
-    //  wp-json/custom/v1/custom
+    //  wp-json/custom/v1/custom-data
 
     add_action( 'rest_api_init', 'custom_rest_api' );
     function custom_rest_api() {
-        register_rest_route( 'custom/v1', '/custom', array(
+        register_rest_route( 'custom/v1', '/custom-data', array(
             'methods' => 'GET',
             'callback' => 'custom_rest_api_callback',
             'permission_callback' => '__return_true'
