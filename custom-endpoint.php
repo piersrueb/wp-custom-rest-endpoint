@@ -19,7 +19,7 @@
                 'paged' => $paged,
                 'post__not_in' => get_option( 'sticky_posts' ),
                 'posts_per_page' => 100,
-                'post_type' => array( 'post', 'page' )
+                'post_type' => array( 'post', 'page' )  //  data to display
             )
         );
         foreach( $posts as $post ) {
