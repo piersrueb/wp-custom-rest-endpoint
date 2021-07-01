@@ -23,10 +23,11 @@
             )
         );
         foreach( $posts as $post ) {
+            //  get the post id
             $id = $post->ID;
-            $post_thumbnail = ( has_post_thumbnail( $id ) ) ? get_the_post_thumbnail_url( $id ) : null;
-            $team_thumbnail = ( has_post_thumbnail( $id ) ) ? get_the_post_thumbnail_url( $id, 'portrait' ) : null;
-            $post_content_filtered = $post->post_content;
+            //  get the post thumbnail with the custom size 'portait'
+            $post_thumbnail = ( has_post_thumbnail( $id ) ) ? get_the_post_thumbnail_url( $id, 'portrait' ) : null;
+            $post_content = $post->post_content;
             $post_excerpt = get_the_excerpt($id);
             $permalink = get_permalink($id);
             //  get acf field
@@ -40,10 +41,9 @@
                 'slug' => $post->post_name,
                 'type' => $post->post_type,
                 'title' => $post->post_title,
-                'content' => $post_content_filtered,
+                'content' => $post_content,
                 'excerpt' => $post_excerpt,
                 'featured_img_src' => $post_thumbnail,
-                'team_thumb' => $team_thumbnail,
                 'document_url' => $post_document,
                 'permalink' => $permalink
             );
